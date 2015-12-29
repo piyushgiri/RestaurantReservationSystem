@@ -4,9 +4,65 @@
     <meta charset="UTF-8">
     <title>Owner</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="CSS\core.css" />
-
-
+    <link rel="stylesheet" href="CSS/core.css" />
+    <style>
+        #content
+        {
+            background-color: #f2f2f2;
+            padding: 20px 10px;
+            overflow: auto;
+        }
+        #tab-container
+        {
+            float: left;
+            margin: 50px 0 0 0;
+            width: 126px;
+        }
+        #tab-container ul
+        {
+            list-style: none;
+            text-align: center;
+        }
+        #tab-container ul li
+        {
+            border-top: 1px solid #666;
+            border-right: 1px solid #666;
+            border-bottom: 1px solid #666;
+            border-left: 8px solid #666;
+            background-color: #ddd;
+            margin: 8px 0;
+        }
+        #tab-container ul li a,
+        #tab-container ul li a:visited
+        {
+            text-decoration: none;
+            color: #666;
+            display: block;
+            padding: 15px 5px;
+        }
+        #tab-container ul li:hover
+        {
+            border-left: 8px solid #333;
+        }
+        #tab-container ul li a:hover
+        {
+            color: #000;
+        }
+        #tab-container ul li.selected
+        {
+            border-right: none;
+            background-color: #fff;
+            border-left: 8px solid #006699;
+        }
+        #main-container
+        {
+            min-height: 400px;
+            margin: 0 0 0 125px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #888;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -21,32 +77,29 @@
         </ul>
     </div>
     <div class="div">
-        <h1>Indian Cuisine<img src="Images/Icon.JPG" class="box"></h1>
+        <h1>Indian Cuisine<img src="Images/Icon.jpg" class="box"></h1>
     </div>
    <div class="page-header">
         <h1 align="center">Table Reservation</h1>
 
     </div>
-
     <div class="row">
         <div class="col-md-4">
-            <h3>Indian Cuisine</h3>
+            <div id="content">
+                <div id="tab-container">
+                    <ul>
+                        <li><a href="">Assign Table</a></li>
+                        <li><a href="">Change Table</a></li>
+                        <li><a href="">View Contact List</a></li>
+                        <li><a href="">View Reservation</a></li>
+                        <li><a href="">View Seating Area</a></li>
+                    </ul>
+                </div>
+
+            </div>
             <hr />
             <form>
-                <div class="form-group">
-                    <label><h3>Lunch</h3></label>
-                    <p>
-                    <h4>Mon-Fri 11:30AM - 3:00PM</h4>
-                    <hr/>
-                    </p>
-                </div>
-            </form>
-
-            <div class="form-group">
-                <label><h3>Dinner</h3></label>
-                <p><h4>Mon-Fri 5:30PM - 10:00PM</h4></p>
-                <p><h4>Sat-Sun 5:00PM - 12:00AM</h4></p>
-            </div>
+                <input type="checkbox"><label class="form-group"><h3>Auto Assign Table</h3></label>
             </form>
         </div>
         <div class="col-md-4">
@@ -110,6 +163,7 @@
 
     </div>
     </div>
+
 </body>
 <script
         type="text/javascript"

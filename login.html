@@ -17,18 +17,20 @@
             <h1 class="text-center">Sign In</h1>
             <div>
               <form>
-                    <input type="text" id="username" class="form-control" placeholder="Email" required autofocus>
-                    <input type="password" id="pwd" class="form-control" placeholder="Password" required>
+                    <input type="text" id="username" class="form-control" placeholder="Email" required autofocus><br>
+                  <input type="password" id="pwd" class="form-control" placeholder="Password" required><hr/>
+
                     <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="validate();">
                         Sign in</button>
                   <hr/>
-                    </form>
+                  <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.navigate='../home.html'">
+                      Back</button>
+              </form>
             </div>
         </div>
     </div>
     <div><hr/></div>
 </div>
-
 </body>
 <script>
     function validate()
@@ -38,7 +40,7 @@
         if(usrnm == "sample" && pd == "password")
         {
             alert("User Validated ")
-            window.location.href = "admin.html";
+            window.location.href="RestaurantReservationSystem/admin.html";
         }
         else
         {
