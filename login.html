@@ -16,31 +16,37 @@
         <div class="col-sm-6 col-md-4 col-md-offset-4">
             <h1 class="text-center">Sign In</h1>
             <div>
-              <form>
+              <form action="admin.html">
                     <input type="text" id="username" class="form-control" placeholder="Email" required autofocus><br>
                   <input type="password" id="pwd" class="form-control" placeholder="Password" required><hr/>
 
-                    <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="validate();">
+                    <button  id="btnsignIn"   class="btn btn-lg btn-primary btn-block" type="submit" onclick="validate()">
                         Sign in</button>
                   <hr/>
-                  <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.navigate='../home.html'">
-                      Back</button>
               </form>
+                <form action="home.html">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.navigate='../home.html'">
+                        Back</button>
+                </form>
             </div>
         </div>
     </div>
     <div><hr/></div>
 </div>
 </body>
-<script>
+<script type="text/javascript">
     function validate()
     {
         var usrnm= document.getElementById("username").value;
         var pd = document.getElementById("pwd").value;
         if(usrnm == "sample" && pd == "password")
         {
-            alert("User Validated ")
-            window.location.href="RestaurantReservationSystem/admin.html";
+            alert("User Validated ");
+            //window.location.href='http://localhost:63342/RestaurantReservationSystem/admin.html';
+            //window.location.assign("http://localhost:63342/RestaurantReservationSystem/admin.html");
+            //setTimeout(function(){document.location.href = "www.google.com;"},500);
+            //window.navigate="www.google.com";
+            this.location.href("admin.html");
         }
         else
         {
