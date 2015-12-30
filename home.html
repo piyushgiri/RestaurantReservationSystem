@@ -9,15 +9,11 @@
 </head>
 <body>
 <div class="container">
-
     <div class = "div">
         <h1 >Indian Cuisine </h1><img src="Images/Icon.jpg" class="box">
-</div>
-
-
-
+    </div>
     <div>
-        <p>
+
         <ul class="nav nav-tabs">
             <li class="active"><a href="home.html">Home</a></li>
             <li><a href="#">Menu</a></li>
@@ -26,7 +22,28 @@
             <li><a href="#">About Us</a></li>
             <li><a href="login.html">Log In</a> </li>
         </ul>
+    </div><br>
+    <table width="1100" height="500"align="center">
+
+    </table>
     </div>
-</div>
 </body>
+<script src="http://code.jquery.com/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script>
+    jQuery(function($) {
+        var images = ['Images/chole.jpg', 'Images/idli.jpg'],
+                tempR = 0,
+                n = images.length;
+        for (var i = 0; i < n; i++) {
+            var img = new Image().src = images[i];
+        }
+        function fader() {
+            var r = Math.floor(Math.random() * n);
+            $('table').css({ backgroundImage: "url(" + images[r] + ")" } );
+            tempR = r;
+        }
+        fader();
+        setInterval(fader, 2000);
+    });
+</script>
 </html>
